@@ -7,13 +7,18 @@
         <link rel="stylesheet" href="css/style.css">
 
         <canvas id="canvas"></canvas>
-        <div id="upload" class="wrapper">
-            <input type="file" id="musicfile" accept="audio/*" />
+
+        <div id="button-content" class="wrapper">
+            <input type="file" id="musicfile" accept="audio/*" hidden = "hidden"/>
             <button type = "button" id = "custom-upload">Upload a song</button>
         </div>
+
         <audio id="audio"></audio>
 
+
+        <script src="js/uploadbutton.js"></script>
         <script src="js/index.js"></script>
+
 
 
     </body>

@@ -8,7 +8,7 @@
 
 }
 
-.wrapper {
+#button-content {
 
   position: fixed;
   top: 100px;
@@ -19,9 +19,13 @@
 #custom-upload {
 
     padding: 14px 40px;
-    text-decoration: none;
     color: white;
+    background-color: #cc0000;
     border: none;
-    background-color: #f44336;
+    border-radius: 10px;
     font-size: 20px
+
+}
+#custom-upload:hover {
+    background-color: #e60000;
 }
