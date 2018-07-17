@@ -26,6 +26,10 @@
     font-size: 20px
 
 }
+#filetypes {
+    color:white;
+    font-size:20px;
+}
 #custom-upload:hover {
     background-color: #e60000;
 }
