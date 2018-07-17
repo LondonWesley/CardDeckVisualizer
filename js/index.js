@@ -13,9 +13,10 @@ window.onload = function(){
     var file = document.getElementById("musicfile");
     var audio = document.getElementById("audio");
 
-    //make the canvas that nice green
-    ctx.fillStyle = "#5dd55d";
+
+    ctx.fillStyle = "#5dd55d"; // green
     ctx.fillRect(0, 0, winWidth, winHeight);
+
     file.onchange = function(){
         var files = this.files;
         audio.src = URL.createObjectURL(files[0]);
