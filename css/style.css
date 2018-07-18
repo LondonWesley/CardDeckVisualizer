@@ -1,16 +1,13 @@
 #canvas {
-
   position: fixed;
   left:0;
   top: 0;
   width:  100%;
   height: 100%;
   z-index: 0;
-
 }
 
 #button-content {
-
   position: fixed;
   top: 100px;
   left: 40%;
@@ -18,33 +15,48 @@
 }
 
 #custom-upload {
-
     padding: 14px 40px;
     color: white;
     background-color: #cc0000;
     border: none;
     border-radius: 10px;
     font-size: 20px
-
 }
 
 #custom-upload:hover {
     background-color: #e60000;
 }
 
+
 #filetypes {
     color:white;
     font-size:20px;
 }
 
-#top-bar{
+/*Style for top bar */
+#toolbar{
     position: fixed;
-    top: 0px;
+    top: -20px;
     left: 0px;
-    padding: 14px 40px;
     color: white;
     background-color: #333334;
     border: none;
     font-size: 20px;
     z-index: 3;
+    list-style-type: none;
+
+}
+
+
+li {
+     display: inline;
+}
+li button {
+    color: white;
+    background-color: #cc0000;
+    border: none;
+    font-size: 20px
+}
+ul {
+
 }
