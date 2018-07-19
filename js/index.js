@@ -23,7 +23,7 @@ window.onload = function(){
         audio.load();
         audio.play();
 
-        var context = new AudioContext();
+        var context =new (window.AudioContext || window.webkitAudioContext)();
         var src = context.createMediaElementSource(audio);
         var analyser = context.createAnalyser();
 
@@ -31,7 +31,10 @@ window.onload = function(){
         analyser.connect(context.destination);
 
         analyser.fftSize = 32;//256 original
+        analyser.minDecibels = -70;
+        analyser.maxDecibels = -10;
         analyser.smoothingTimeConstant = 0.9;
+
         var bufferLength = analyser.frequencyBinCount;
         console.log(bufferLength);
 
@@ -52,15 +55,20 @@ window.onload = function(){
 
           ctx.fillStyle = "#4e9843";
           ctx.fillRect(0, 0, winWidth, winHeight);
+
           for (var i = 0; i < bufferLength; i++) {
             barHeight = dataArray[i];
 
-            for(var c = 1; c < Math.floor(barHeight/19)+1; c++){
-                var image = new Image();
 
-                image.src = "img/suit1/" +c+ ".png";
-                ctx.drawImage(image,x + 10, winHeight-300 - c*20);
+
+            cardRange = Math.floor(barHeight/19);
+
+            if(cardRange!= 0){
+                var image = new Image();
+                image.src = "img/suit1/" +cardRange+ ".png";
+                ctx.drawImage(image,x + 10, winHeight-500);
             }
+
             x += barWidth ;
           }
 
