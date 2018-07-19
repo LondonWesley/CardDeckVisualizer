@@ -58,6 +58,10 @@ window.onload = function(){
 
           for (var i = 0; i < bufferLength; i++) {
             barHeight = dataArray[i];
+            var r = barHeight + (25 * (i/bufferLength));
+            var g = 250 * (i/bufferLength);
+            var b = 50;
+
 
 
 
@@ -67,6 +71,9 @@ window.onload = function(){
                 var image = new Image();
                 image.src = "img/suit1/" +cardRange+ ".png";
                 ctx.drawImage(image,x + 10, winHeight-500);
+                ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+                ctx.font = "30px Comic Sans MS";
+                ctx.fillText(barHeight, x, winHeight-60);
             }
 
             x += barWidth ;
