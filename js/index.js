@@ -15,7 +15,7 @@ window.onload = function(){
 
 
     ctx.fillStyle = "#4e9843";
-    ctx.fillRect(0, 0, winWidth, winHeight);
+    //ctx.fillRect(0, 0, winWidth, winHeight);
 
     file.onchange = function(){
         var files = this.files;
@@ -31,6 +31,7 @@ window.onload = function(){
         analyser.connect(context.destination);
 
         analyser.fftSize = 32;//256 original
+        //TODO: create menu for adjusting ranges
         analyser.minDecibels = -70;
         analyser.maxDecibels = -10;
         analyser.smoothingTimeConstant = 0.9;
@@ -54,15 +55,13 @@ window.onload = function(){
           analyser.getByteFrequencyData(dataArray);
 
           ctx.fillStyle = "#4e9843";
-          ctx.fillRect(0, 0, winWidth, winHeight);
+          ctx.clearRect(0, 0, winWidth, winHeight);
 
           for (var i = 0; i < bufferLength; i++) {
             barHeight = dataArray[i];
             var r = barHeight + (25 * (i/bufferLength));
             var g = 250 * (i/bufferLength);
             var b = 50;
-
-
 
 
             cardRange = Math.floor(barHeight/19);
