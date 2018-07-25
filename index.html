@@ -6,15 +6,23 @@
 
 
     <body>
-
+        <canvas id="canvas"></canvas>
+        <!-- top bar -->
         <ul id = "toolbar">
             <li><button type = "button" id = "settingbtn">Settings</button></li>
             <li><button type = "button" id = "aboutbtn">About</button></li>
-            <li><button type = "button" id = "musicbtn">Music</button></li>
+            <li><button type = "button" id = "musicselectionbtn">Music</button></li>
         </ul>
+        <!--settings modal-->
+        <div id= "music-modal" class="modal">
+            <div id = "selection-content" class = "modal-content">
+                <span>Boom! will eventually replace that red button</span>
+            </div>
+        </div>
 
 
-        <canvas id="canvas"></canvas>
+
+        <!-- music button soon to be replaced with toolbar button-->
 
         <div id="button-content" class="wrapper">
             <input type="file" id="musicfile" accept="audio/*" hidden = "hidden"/>
@@ -25,7 +33,7 @@
         <audio id="audio"></audio>
 
 <!--javascript files and css stylesheet-->
-        <script src="js/uploadbutton.js"></script>
+        <script src="js/interfaces.js"></script>
         <script src="js/index.js"></script>
 
         <link rel="stylesheet" href="css/style.css">
