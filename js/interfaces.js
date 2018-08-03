@@ -23,4 +23,5 @@ window.onclick = function(){
 
 custombutton.addEventListener("click", function(){
     filebutton.click();
+    musicmodal.style.display = "none";
 })

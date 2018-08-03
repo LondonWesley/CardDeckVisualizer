@@ -16,7 +16,15 @@
         <!--settings modal-->
         <div id= "music-modal" class="modal">
             <div id = "selection-content" class = "modal-content">
-                <span>Boom! will eventually replace that red button</span>
+                <div class = "modal-header">
+                    <span>Music Selection</span>
+                </div>
+            <div class = "modal-subheader">
+                <span> Upload a song from your computer</span>
+            </div>
+                <div class = "modal-body">
+                    <button type = "button" class = "modal-button" id = "custom-upload">Upload</button>
+                </div>
             </div>
         </div>
 
@@ -24,9 +32,8 @@
 
         <!-- music button soon to be replaced with toolbar button-->
 
-        <div id="button-content" class="wrapper">
+        <div id="button-content">
             <input type="file" id="musicfile" accept="audio/*" hidden = "hidden"/>
-            <button type = "button" id = "custom-upload">Upload a song</button>
             <div id = "filetypes"> Accepts .wav .mp3 .ogg</div>
         </div>
 

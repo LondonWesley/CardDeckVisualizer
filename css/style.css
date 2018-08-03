@@ -15,18 +15,7 @@
   z-index: 3;
 }
 
-#custom-upload {
-    padding: 14px 40px;
-    color: white;
-    background-color: #cc0000;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px
-}
 
-#custom-upload:hover {
-    background-color: #e60000;
-}
 
 
 #filetypes {
@@ -40,12 +29,13 @@
     top: -20px;
     left: 0px;
     color: white;
-    background-color: #3c3c3c;
+    background-color: #292F33;
     border: none;
     font-size: 20px;s
     z-index: 3;
     list-style-type: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 
 }
 
@@ -55,13 +45,15 @@ li {
 }
 li button {
     color: white;
-    background-color: #3c3c3c;
+    background-color:  #292F33;
     font-family:'Segoe UI',Arial,sans-serif;
 
     border: none;
     font-size: 20px
 }
-/*modal pop ups */
+
+
+/*-------------------------------modal pop up designs-------------------------------------*/
 
 .modal {
     display: none; /* Hidden by default */
@@ -74,11 +66,47 @@ li button {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .modal-content {
-    background-color: #fefefe;
+    background-color:#E1E8ED;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 0px;
+    /*border: 6px solid #3c3c3c;*/
     width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-header {
+
+    padding: 16px 20px;
+    font-family:'Segoe UI',Arial,sans-serif;
+    font-size: 22px;
+    background-color: #292F33;
+    color: white;
+
+}
+
+.modal-subheader {
+
+    padding: 5px 16px;
+    font-family:'Segoe UI',Arial,sans-serif;
+    font-size: 14px;
+    background-color: #CCD6DD;
+    color: #292F33;
+
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-button {
+    padding: 10px 4px;
+    color: white;
+    background-color:  #66757F;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px
 }
