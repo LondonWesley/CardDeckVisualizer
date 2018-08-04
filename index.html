@@ -13,7 +13,7 @@
             <li><button type = "button" id = "aboutbtn">About</button></li>
             <li><button type = "button" id = "musicselectionbtn">Music</button></li>
         </ul>
-        <!--settings modal-->
+        <!--music selection modal-->
         <div id= "music-modal" class="modal">
             <div id = "selection-content" class = "modal-content">
                 <div class = "modal-header">
@@ -27,11 +27,27 @@
                 </div>
             </div>
         </div>
+<!--Settings modal-->
+        <div id = "settings-modal" class = "modal">
+            <div id = "settings-content" class = "modal-settingcontent">
+                <div class = "modal-header">
+                    <span>Visualizer Settings</span>
+                </div>
+                <div class = "modal-subheader">
+                    <span id = "volumedisplay">Volume: 100%</span>
+                </div>
+                <div class = "modal-body">
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="90" class="slider" id="volume">
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
 
 
-        <!-- music button soon to be replaced with toolbar button-->
-
+<!-- TODO: replace with fancy overlay introduction to site -->
         <div id="button-content">
             <input type="file" id="musicfile" accept="audio/*" hidden = "hidden"/>
             <div id = "filetypes"> Accepts .wav .mp3 .ogg</div>
